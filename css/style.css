@@ -236,3 +236,9 @@ body {
 .restar{
     cursor: pointer;
 }
+
+
+.my-custom-button-class{
+    background-color: pink !important;
+    border: none !important;
+}

@@ -30,12 +30,13 @@ productos.forEach((product) => {
     // Cuando el usuario haga click en el boton, en el carrito se van a ir agregando(push) los elementos
     comprar.addEventListener("click", () => {
 
+
         const repetido = carrito.some((repeatProduct) => repeatProduct.id === product.id); // Busco un producto repetido a traves del id
 
 
         if (repetido) {
             carrito.map((produ) => {
-                if (produ.id === produ.id) { // si detecto dos productos con el mismo id se lo sumo en la variable cantidad
+                if (produ.id === product.id) { // si detecto dos productos con el mismo id se lo sumo en la variable cantidad
                     produ.cantidad++;
                 }
             })
@@ -48,6 +49,17 @@ productos.forEach((product) => {
                 cantidad: product.cantidad,
             });
         }
+
+        Swal.fire({
+            title: '¡Producto agregado!',
+            text: 'El artículo se ha agregado al carrito.',
+            icon: 'success',
+            confirmButtonText: 'Aceptar',
+            customClass: {
+                confirmButton: 'my-custom-button-class'
+            },
+        });
+
         console.log(carrito);
         cantidadContador();
         guardar();
@@ -102,6 +114,7 @@ searchButton.addEventListener("click", () => {
                     cantidad: producto.cantidad,
                 });
             }
+
 
             console.log(carrito);
             cantidadContador();
