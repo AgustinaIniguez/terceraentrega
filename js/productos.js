@@ -3,8 +3,7 @@ const productos = [
         id: 1,
         nombre: "Blusa estampada",
         precio: 3000,
-        img:
-            src = "https://ae01.alicdn.com/kf/Scfde7147d12d4b46a536e489645cea90z/Blusa-de-chif-n-de-manga-larga-para-mujer-camisa-de-manga-larga-con-estampado-elegante.jpg",
+        img: "https://www.dhresource.com/260x260/f2/albu/g21/M01/7C/85/rBNaOWF6Q0SAVsz2AAExrw67m40272.jpg",
         cantidad: 1,
 
     },
@@ -12,41 +11,36 @@ const productos = [
         id: 2,
         nombre: "Blusa fruncida",
         precio: 3500,
-        img:
-        src= "https://s.alicdn.com/@sc04/kf/H2c51d7c024ec4689810463922de80e65f.jpg_300x300.jpg",
+        img:"https://s.alicdn.com/@sc04/kf/H2c51d7c024ec4689810463922de80e65f.jpg_300x300.jpg",
         cantidad: 1,
 
     },
     {
         id: 3,
-        nombre: "Remera de dama",
+        nombre: "Camisa de dama",
         precio: 2500,
-        img:
-        src = "https://ae01.alicdn.com/kf/H27ff1b9b9e2e476f8ce05cdc24a186d8R/Tops-y-Blusas-para-Mujer-Blusas-De-Moda-con-estampado-De-gasa-Camisas-ropa-para-Mujer.jpg_Q90.jpg_.webp",
+        img:"https://img.bestdealplus.com/ae04/kf/H5f189e5ee4eb4a36adaecb3e9d4e4d18g.jpg",
         cantidad: 1,
     },
     {
         id: 4,
-        nombre: "Blusa con aberturas",
+        nombre: "Blusa de dama",
         precio: 2800,
-        img:
-        src = "https://ae01.alicdn.com/kf/H01a14580c4114f7fa73a788d1edc0a70G/Blusa-de-gasa-con-Manga-mariposa-para-Mujer-camisa-rosa-con-volantes-y-estampado-Floral-moda.jpg",
+        img:"https://m.media-amazon.com/images/I/61-kGn-1FjL._AC_SX522_.jpg",
         cantidad: 1,
     },
     {
         id: 5,
-        nombre: "Blusa floreada ",
+        nombre: "Blusa asimetrica",
         precio: 2000,
-        img:
-        src = "https://ae01.alicdn.com/kf/H82a8ae9e328f4f8aa6626d0bb261d812h/Blusa-De-chif-n-con-manga-corta-y-hombros-descubiertos-para-verano-camisa-con-estampado-De.jpg",
+        img:"https://m.media-amazon.com/images/I/61qgoZAWW4L.jpg",
         cantidad: 1,
     },
     {
         id: 6,
-        nombre: "Blusa escote en barco",
+        nombre: "Blusa con mangas",
         precio: 2200,
-        img:
-        src = "https://ae01.alicdn.com/kf/H85ddd5a8f9674d1eb658a46713a028a6q/Blusa-De-chif-n-a-rayas-con-manga-corta-para-verano-camisa-con-hombros-descubiertos-para.jpg",
+        img:"https://image.made-in-china.com/202f0j00DOmicCeFilgA/Summer-Blouses-Womens-Casual-Solid-Chiffon-Shirt-Blusa-Feminina-Half-Sleeve-Korean-Loose-Women-Blouse-Top.webp",
         cantidad: 1,
     },
 ];

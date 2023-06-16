@@ -5,8 +5,6 @@ const cantidadCarrito = document.getElementById("cantidadCarrito");
 const searchInput = document.getElementById("searchInput");
 const searchButton = document.getElementById("searchButton");
 
-
-
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 productos.forEach((product) => {
@@ -26,20 +24,19 @@ productos.forEach((product) => {
 
     content.append(comprar); // lo pego en algun lugar
 
-
     // Cuando el usuario haga click en el boton, en el carrito se van a ir agregando(push) los elementos
     comprar.addEventListener("click", () => {
-
-
-        const repetido = carrito.some((repeatProduct) => repeatProduct.id === product.id); // Busco un producto repetido a traves del id
-
+        const repetido = carrito.some(
+            (repeatProduct) => repeatProduct.id === product.id
+        ); // Busco un producto repetido a traves del id
 
         if (repetido) {
             carrito.map((produ) => {
-                if (produ.id === product.id) { // si detecto dos productos con el mismo id se lo sumo en la variable cantidad
+                if (produ.id === product.id) {
+                    // si detecto dos productos con el mismo id se lo sumo en la variable cantidad
                     produ.cantidad++;
                 }
-            })
+            });
         } else {
             carrito.push({
                 id: product.id,
@@ -51,12 +48,12 @@ productos.forEach((product) => {
         }
 
         Swal.fire({
-            title: '¡Producto agregado!',
-            text: 'El artículo se ha agregado al carrito.',
-            icon: 'success',
-            confirmButtonText: 'Aceptar',
+            title: "¡Producto agregado!",
+            text: "El artículo se ha agregado al carrito.",
+            icon: "success",
+            confirmButtonText: "Aceptar",
             customClass: {
-                confirmButton: 'my-custom-button-class'
+                confirmButton: "my-custom-button-class",
             },
         });
 
@@ -64,14 +61,9 @@ productos.forEach((product) => {
         cantidadContador();
         guardar();
     });
-
 });
 
-
-
 // Funcionalidad de búsqueda
-
-
 
 searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value.toLowerCase();
@@ -97,7 +89,9 @@ searchButton.addEventListener("click", () => {
         content.append(comprar);
 
         comprar.addEventListener("click", () => {
-            const repetido = carrito.some((repeatProduct) => repeatProduct.id === producto.id);
+            const repetido = carrito.some(
+                (repeatProduct) => repeatProduct.id === producto.id
+            );
 
             if (repetido) {
                 carrito.map((produ) => {
@@ -115,7 +109,6 @@ searchButton.addEventListener("click", () => {
                 });
             }
 
-
             console.log(carrito);
             cantidadContador();
             guardar();
@@ -123,10 +116,7 @@ searchButton.addEventListener("click", () => {
     });
 });
 
-
-
-
 const guardar = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+};
 
